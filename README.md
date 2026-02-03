@@ -33,7 +33,7 @@ mkdir -p ~/striker_ws/src
 cd ~/striker_ws/src
 
 # Clone repository
-git clone https://github.com/yourusername/striker_bot.git
+git clone https://github.com/Mouliesankaran/StrikerBot---Autonomous-GPS-Navigation-Robot.git
 
 # Build the package
 cd ~/striker_ws
