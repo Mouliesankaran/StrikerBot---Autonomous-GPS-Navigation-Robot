@@ -1,0 +1,36 @@
+controller_manager:
+  ros:
+    parameters:
+      update_rate: 100.0
+
+striker_bot_base_controller:
+  ros:
+    parameters:
+      type: "diff_drive_controller/DiffDriveController"
+
+      left_wheel_names: ["front_left_wheel_joint", "rear_left_wheel_joint"]
+      right_wheel_names: ["front_right_wheel_joint", "rear_right_wheel_joint"]
+
+      wheel_separation: 0.75
+      wheel_radius: 0.15
+
+      pose_reference_frame: "odom"
+      base_frame_id: "base_footprint"
+
+      odom_frame_id: "odom"
+      enable_odom_tf: true
+
+      linear:
+        x:
+          has_velocity_limits: true
+          max_velocity: 3.0
+          has_acceleration_limits: true
+          max_acceleration: 1.0
+      angular:
+        z:
+          has_velocity_limits: true
+          max_velocity: 3.0
+          has_acceleration_limits: true
+          max_acceleration: 1.0
+
+      publish_rate: 50.0
